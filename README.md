@@ -1,7 +1,9 @@
-### Run This Command Before Run Playbook For Setup Python on Remote Host
-ansible locust-all -i hosts -u root -m raw -a 'DEBIAN_FRONTEND=noninteractive apt update && apt -y install python && python --version'
+# Locust Ansible Distributed
 
-### Run Playbook For Deploying the Locust Load Test Files
+### Run This Command Before Run Playbook For Setup Python on Remote Host
+ansible locust-all -i hosts -u root -m raw -a 'DEBIAN_FRONTEND=noninteractive apt update && apt -y install python'
+
+### Run Playbook For Deploying the Locust File and Installing Dependencies
 ansible-playbook -i hosts locust.yaml
 
 ### Run This Command After All For Setup Master Node
