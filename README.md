@@ -1,4 +1,5 @@
 # Locust Ansible Distributed
+Locust is an easy-to-use, distributed, user load testing tool. It is intended for load-testing web sites (or other systems) and figuring out how many concurrent users a system can handle.
 
 ### Run This Command Before Run Playbook For Setup Python on Remote Host
 ansible locust-all -i hosts -u root -m raw -a 'DEBIAN_FRONTEND=noninteractive apt update && apt -y install python'
