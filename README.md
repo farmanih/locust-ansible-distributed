@@ -3,7 +3,7 @@ Locust is an easy-to-use, distributed, user load testing tool. It is intended fo
 With this repo you can run locust automatically with ansible without any dependency on cloud servers or fresh remote hosts in master slave (distributed) mode.
 
 ## Step 1
-Edit the hosts files and add yor host on this file
+Edit the hosts file and add yor hosts on this file make your locust file.
 
 ## Step 2
 Run the following commands with replace the host site and master server ip
