@@ -1,0 +1,31 @@
+# Version=0.1
+---
+- name: Dunro Locust LoadTest Ansible
+  hosts: locust-all
+  remote_user: root
+  gather_facts: yes
+  tasks:
+  - name: Update The System Packages
+    apt:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    with_items:
+      - python-setuptools
+      - python-dev
+      - libevent-dev
+      - libzmq3-dev
+      - python-pip
+
+  - name: Copy Locust File
+      copy:
+        src: locustfile.py
+        dest: ~/locustfile.py
+        mode: 0644       
+
+  - name: Installing Python Packages With Pip
+    pip:
+      name: "{{ item }}"
+    with_items:
+      - locustio
+      - pyzmq
