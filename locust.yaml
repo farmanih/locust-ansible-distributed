@@ -1,6 +1,6 @@
 # Version=0.1
 ---
-- name: Dunro Locust LoadTest Ansible
+- name: Locust Load Test Ansible
   hosts: locust-all
   remote_user: root
   gather_facts: yes
